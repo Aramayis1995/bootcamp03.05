@@ -1,17 +1,13 @@
 function ParseFloat(str) {
-  for (i = 0; i < str.length; i++) {
-    if (str[0] === " ") {
-      str = str.slice(1, str.length);
-    }
-  }
+  str = str.trim();
   if (str.charCodeAt(0) < 48 || str.charCodeAt(0) > 57) {
     console.log(NaN);
     return;
   }
-  let j = 0;
+  let j;
   for (let i = 0; i < str.length; i++) {
-    j += 1;
     if (str[i] === ".") {
+      j = i;
       break;
     }
   }
@@ -23,4 +19,4 @@ function ParseFloat(str) {
     }
   }
 }
-ParseFloat("5.5.gk");
+ParseFloat("   5.55.gk  ");
