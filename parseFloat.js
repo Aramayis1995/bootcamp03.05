@@ -8,7 +8,7 @@ function ParseFloat(str) {
     console.log(NaN);
     return;
   }
-  j = 0;
+  let j = 0;
   for (let i = 0; i < str.length; i++) {
     j += 1;
     if (str[i] === ".") {
