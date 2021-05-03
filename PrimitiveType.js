@@ -14,8 +14,8 @@ Infinity / 6; //Infinity
 Infinity / -256; //-Infinity
 Infinity / Infinity; //NaN
 0 / 0; //NaN
-+true; // 1
 +false; // 0
++true; // 1
 +null; // 0
 +undefined; // 0
 parseInt(".2"); //NaN
