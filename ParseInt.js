@@ -1,18 +1,26 @@
 function ParseInt(str) {
-  for (i = 0; i < str.length; i++) {
+  console.log(parseInt("    --54 4"));
+  for (let i = 0; i < str.length; i++) {
     if (str[0] === " ") {
       str = str.slice(1, str.length);
     }
   }
-  if ((str.charCodeAt(0) < 48 || str.charCodeAt(0)) > 57) {
+  let k = 0;
+  if (str.charCodeAt(0) === 45) {
+    k = 1;
+  }
+  console.log(k);
+  console.log(str);
+  console.log(str.charCodeAt(k));
+  if (str.charCodeAt(k) < 48 || str.charCodeAt(k) > 57) {
     console.log(NaN);
     return;
   }
-  for (let i = 0; i < str.length; i++) {
-    if (str.charCodeAt(i) < 48 || str.charCodeAt(i) > 57) {
-      console.log(str.slice(0, i));
+  for (; k < str.length; k++) {
+    if (str.charCodeAt(k) < 48 || str.charCodeAt(k) > 57) {
+      console.log(str.slice(0, k));
       return;
     }
   }
 }
-ParseInt("  54  4 .dsv45");
+ParseInt("  --54  4 .dsv45");
